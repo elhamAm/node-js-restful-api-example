@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.84% </span>
+                <span class="strong">67.44% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/43</span>
+                <span class='fraction'>29/43</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.29% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/14</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">62.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>5/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.84% </span>
+                <span class="strong">67.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/43</span>
+                <span class='fraction'>29/43</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -140,38 +140,38 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -214,13 +214,13 @@ var _ = require('lodash');
 var events = eventsData;
 var id = 12;
 &nbsp;
-var updateId = <span class="fstat-no" title="function not covered" >fu</span>nction (req, res, next) {
-<span class="cstat-no" title="statement not covered" >    console.log(req.body);</span>
-<span class="cstat-no" title="statement not covered" >    if (!req.body.id) {</span>
-<span class="cstat-no" title="statement not covered" >        id++;</span>
-<span class="cstat-no" title="statement not covered" >        req.body.id = id + '';</span>
+var updateId = function (req, res, next) {
+    console.log(req.body);
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!req.body.id) {
+        id++;
+        req.body.id = id + '';
     }
-<span class="cstat-no" title="statement not covered" >    next();</span>
+    next();
 };
 &nbsp;
 eventsRouter.param('id', function (req, res, next, id) {
@@ -242,11 +242,11 @@ eventsRouter.get('/:id', function (req, res) {
     res.json(event || <span class="branch-1 cbranch-no" title="branch not covered" >{})</span>;
 });
 &nbsp;
-eventsRouter.post('/', updateId, <span class="fstat-no" title="function not covered" >fu</span>nction (req, res) {
-    var event = <span class="cstat-no" title="statement not covered" >req.body;</span>
+eventsRouter.post('/', updateId, function (req, res) {
+    var event = req.body;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    events.push(event);</span>
-<span class="cstat-no" title="statement not covered" >    res.status(201).json(event || {});</span>
+    events.push(event);
+    res.status(201).json(event || <span class="branch-1 cbranch-no" title="branch not covered" >{})</span>;
 });
 &nbsp;
 eventsRouter.put('/:id', <span class="fstat-no" title="function not covered" >fu</span>nction (req, res) {
@@ -289,7 +289,7 @@ module.exports = eventsRouter;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Mar 07 2020 16:30:13 GMT+0100 (Central European Standard Time)
+                at Sat Mar 07 2020 16:43:56 GMT+0100 (Central European Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

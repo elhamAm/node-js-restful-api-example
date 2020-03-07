@@ -25,6 +25,28 @@ describe("tests start from here", () => {
 	  done();
 	});
 
+	test('post is woking well', () => {
+	  const event = {
+        "topics": "",
+        "thumbnail": "/img/tr-3.jpeg",
+        "url": "index.html",
+        "overrideURL": "",
+        "linkType": "",
+        "title": "Created by Postman",
+        "summary": "Lorem ipsum dolor sit amet"
+    		}
+	  //const response = await sup(app).post('/events');
+
+		return sup(app)
+	     .post("/events")
+	     .send(event)
+		.set('Accept', 'application/json')
+	     .then((response) => {
+	      //expect(res.body.role).to.not.be.equal(role);
+		 expect(response.statusCode).toBe(201);
+	     });
+	});
+
 });
 
 console.log("her");
