@@ -6,14 +6,25 @@ var eventsData = require('../server/data/events-data');
 var events = eventsData;
 //console.log("here");
 //console.log(events);
+describe("tests start from here", () => {
+	test('get is working well', async done => {
+	  const response = await sup(app).get('/events');
+	  //console.log(response.body);
+	  //console.log(events)
+	  expect(response.status).toBe(200);
+	  expect(response.body).toStrictEqual(events)
+	  done();
+	});
 
-it('gets the test endpoint', async done => {
-  const response = await sup(app).get('/events');
-  //console.log(response.body);
-  //console.log(events)
-  expect(response.status).toBe(200);
-  expect(response.body).toStrictEqual(events)
-  done();
+	test('get one id works', async done => {
+	  const response = await sup(app).get('/events/1');
+	  //console.log(events)
+	  //expect(response.status).toBe(200);
+	  //console.log(events[0])
+	  expect(response.body).toStrictEqual(events[0])
+	  done();
+	});
+
 });
 
 console.log("her");

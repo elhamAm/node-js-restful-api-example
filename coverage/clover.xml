@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1583594087533" clover="3.2.0">
-  <project timestamp="1583594087533" name="All files">
-    <metrics statements="63" coveredstatements="35" conditionals="14" coveredconditionals="0" methods="9" coveredmethods="2" elements="86" coveredelements="37" complexity="0" loc="63" ncloc="63" packages="3" files="3" classes="3"/>
+<coverage generated="1583595013729" clover="3.2.0">
+  <project timestamp="1583595013729" name="All files">
+    <metrics statements="63" coveredstatements="41" conditionals="14" coveredconditionals="2" methods="9" coveredmethods="4" elements="86" coveredelements="47" complexity="0" loc="63" ncloc="63" packages="3" files="3" classes="3"/>
     <package name="server">
       <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="server.js" path="/Users/elhamaminmansour/Desktop/stage/gemlius/ans/node-js-restful-api-example/server/server.js">
@@ -15,9 +15,9 @@
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
         <line num="21" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
@@ -35,9 +35,9 @@
       </file>
     </package>
     <package name="server.routers">
-      <metrics statements="43" coveredstatements="15" conditionals="14" coveredconditionals="0" methods="8" coveredmethods="1"/>
+      <metrics statements="43" coveredstatements="21" conditionals="14" coveredconditionals="2" methods="8" coveredmethods="3"/>
       <file name="events-router.js" path="/Users/elhamaminmansour/Desktop/stage/gemlius/ans/node-js-restful-api-example/server/routers/events-router.js">
-        <metrics statements="43" coveredstatements="15" conditionals="14" coveredconditionals="0" methods="8" coveredmethods="1"/>
+        <metrics statements="43" coveredstatements="21" conditionals="14" coveredconditionals="2" methods="8" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -50,16 +50,16 @@
         <line num="12" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="36" count="1" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
