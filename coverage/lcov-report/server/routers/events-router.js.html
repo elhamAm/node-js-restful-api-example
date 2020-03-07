@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.77% </span>
+                <span class="strong">83.72% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>30/43</span>
+                <span class='fraction'>36/43</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">42.86% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/14</span>
+                <span class='fraction'>6/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.77% </span>
+                <span class="strong">83.72% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>30/43</span>
+                <span class='fraction'>36/43</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -149,10 +149,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,19 +175,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -249,20 +249,20 @@ eventsRouter.post('/', updateId, function (req, res) {
     res.status(201).json(event || <span class="branch-1 cbranch-no" title="branch not covered" >{})</span>;
 });
 &nbsp;
-eventsRouter.put('/:id', <span class="fstat-no" title="function not covered" >fu</span>nction (req, res) {
-    var update = <span class="cstat-no" title="statement not covered" >req.body;</span>
+eventsRouter.put('/:id', function (req, res) {
+    var update = req.body;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (update.id) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (update.id) {
 <span class="cstat-no" title="statement not covered" >        delete update.id;</span>
     }
 &nbsp;
-    var event = <span class="cstat-no" title="statement not covered" >_.findIndex(events, {id: req.params.id});</span>
+    var event = _.findIndex(events, {id: req.params.id});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!events[event]) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!events[event]) {
 <span class="cstat-no" title="statement not covered" >        res.send();</span>
     } else {
-        var updatedEvent = <span class="cstat-no" title="statement not covered" >_.assign(events[event], update);</span>
-<span class="cstat-no" title="statement not covered" >        res.json(updatedEvent);</span>
+        var updatedEvent = _.assign(events[event], update);
+        res.json(updatedEvent);
     }
 });
 &nbsp;
@@ -289,7 +289,7 @@ module.exports = eventsRouter;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Mar 07 2020 17:11:32 GMT+0100 (Central European Standard Time)
+                at Sat Mar 07 2020 17:30:16 GMT+0100 (Central European Standard Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

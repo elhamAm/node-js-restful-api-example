@@ -49,6 +49,32 @@ describe("tests start from here", () => {
 		 expect(response.statusCode).toBe(201);
 	     });
 	});
+	const s =  sup(app).get('/events');
+	test('put is woking well', () => {
+	  //const response = await sup(app).post('/events');
+		event = {
+        "id": "10",
+        "topics": "",
+        "thumbnail": "/img/tr-3.jpeg",
+        "url": "index.html",
+        "overrideURL": "",
+        "linkType": "",
+        "title": "Updated by Postman",
+        "summary": "Lorem ipsum dolor sit amet"
+    		}
+		return sup(app)
+		.put("/events/10")
+		.then((response) => {
+		 //console.log(response.body);
+		 //console.log(events[9]);
+
+		 //console.log(s.body);
+		 //console.log(event);
+		 expect(response.body).toStrictEqual(event);
+		 expect(response.body).toStrictEqual(events[9]);
+		 //expect(response.statusCode).toBe(200);
+		});
+	});
 
 	test('delete is woking well', () => {
 	  //const response = await sup(app).post('/events');
@@ -65,7 +91,7 @@ describe("tests start from here", () => {
 
 });
 
-console.log("her");
+//console.log("her");
 
 // describe("Test the root path", () => {
 //   test("It should response the GET method", done => {
