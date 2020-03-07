@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "node server/server.js",
-    "test": "jest --collectCoverage"
+    "test": "jest --collectCoverage --runInBand --forceExit"
   },
   "repository": {
     "type": "git",
