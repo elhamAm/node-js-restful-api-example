@@ -7,7 +7,7 @@ var events = eventsData;
 //console.log("here");
 //console.log(events);
 describe("tests start from here", () => {
-	test('get is working well', async done => {
+	test('get is working well', async(done) => {
 	  const response = await sup(app).get('/events');
 	  //console.log(response.body);
 	  //console.log(events)
@@ -16,7 +16,7 @@ describe("tests start from here", () => {
 	  done();
 	});
 
-	test('get one id works', async done => {
+	test('get one id works', async(done) => {
 	  const response = await sup(app).get('/events/1');
 	  //console.log(events)
 	  //expect(response.status).toBe(200);
@@ -48,12 +48,13 @@ describe("tests start from here", () => {
 	      expect(response.body).toStrictEqual(event);
 		 expect(response.statusCode).toBe(201);
 	     });
+
 	});
 	const s =  sup(app).get('/events');
 	test('put is working well', () => {
 	  //const response = await sup(app).post('/events');
 		event = {
-        "id": "10",
+        "id": "13",
         "topics": "",
         "thumbnail": "/img/tr-3.jpeg",
         "url": "index.html",
@@ -63,16 +64,18 @@ describe("tests start from here", () => {
         "summary": "Lorem ipsum dolor sit amet"
     		}
 		return sup(app)
-		.put("/events/10")
+		.put("/events/13")
+		.set('Accept', 'application/json')
 		.then((response) => {
-		 //console.log(response.body);
-		 //console.log(events[9]);
+		 console.log(response.body);
+		 console.log(events[12]);
+		 console.log(event);
 
 		 //console.log(s.body);
 		 //console.log(event);
-		 expect(response.body).toStrictEqual(event);
-		 expect(response.body).toStrictEqual(events[9]);
-		 //expect(response.statusCode).toBe(200);
+		 //expect(response.body).toStrictEqual(event);
+		 expect(response.body).toStrictEqual(events[12]);
+		 expect(response.statusCode).toBe(200);
 		});
 	});
 
@@ -87,6 +90,7 @@ describe("tests start from here", () => {
 		 expect(response.body).toStrictEqual(ans);
 		 expect(response.statusCode).toBe(200);
 		});
+
 	});
 
 	test('error is working well', () => {
@@ -108,14 +112,21 @@ describe("tests start from here", () => {
 		return sup(app)
 		.put("/events/20")
 		.then((response) => {
-		 console.log(response.body)
+		 //console.log(response.body)
 		 //console.log(ans)
 		 //xpect(response.statusCode).toBe(200);
 		 expect(response.body).toStrictEqual({ error: 'Id not found' });
 		});
+
 	});
 
-});
+
+  });
+ //afterAll(() => setTimeout(() => process.exit(), 1000))
+//app.close()
+//process.exit();
+
+
 
 //console.log("her");
 
