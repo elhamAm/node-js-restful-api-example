@@ -26,6 +26,7 @@ describe("tests start from here", () => {
 	});
 
 	test('post is woking well', () => {
+
 	  const event = {
         "topics": "",
         "thumbnail": "/img/tr-3.jpeg",
@@ -33,7 +34,8 @@ describe("tests start from here", () => {
         "overrideURL": "",
         "linkType": "",
         "title": "Created by Postman",
-        "summary": "Lorem ipsum dolor sit amet"
+        "summary": "Lorem ipsum dolor sit amet",
+	   "id": '13'
     		}
 	  //const response = await sup(app).post('/events');
 
@@ -42,9 +44,23 @@ describe("tests start from here", () => {
 	     .send(event)
 		.set('Accept', 'application/json')
 	     .then((response) => {
-	      //expect(res.body.role).to.not.be.equal(role);
+		 //console.log(response.body)
+	      expect(response.body).toStrictEqual(event);
 		 expect(response.statusCode).toBe(201);
 	     });
+	});
+
+	test('delete is woking well', () => {
+	  //const response = await sup(app).post('/events');
+	  	ans = events[3]
+		return sup(app)
+		.delete("/events/4")
+		.then((response) => {
+		 //console.log(response.body)
+		 //console.log(ans)
+		 expect(response.body).toStrictEqual(ans);
+		 expect(response.statusCode).toBe(200);
+		});
 	});
 
 });
