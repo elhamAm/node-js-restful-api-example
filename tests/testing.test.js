@@ -25,7 +25,7 @@ describe("tests start from here", () => {
 	  done();
 	});
 
-	test('post is woking well', () => {
+	test('post is working well', () => {
 
 	  const event = {
         "topics": "",
@@ -50,7 +50,7 @@ describe("tests start from here", () => {
 	     });
 	});
 	const s =  sup(app).get('/events');
-	test('put is woking well', () => {
+	test('put is working well', () => {
 	  //const response = await sup(app).post('/events');
 		event = {
         "id": "10",
@@ -76,7 +76,7 @@ describe("tests start from here", () => {
 		});
 	});
 
-	test('delete is woking well', () => {
+	test('delete is working well', () => {
 	  //const response = await sup(app).post('/events');
 	  	ans = events[3]
 		return sup(app)
@@ -86,6 +86,32 @@ describe("tests start from here", () => {
 		 //console.log(ans)
 		 expect(response.body).toStrictEqual(ans);
 		 expect(response.statusCode).toBe(200);
+		});
+	});
+
+	test('error is working well', () => {
+	  //const response = await sup(app).post('/events');
+
+		return sup(app)
+		.get("/blabla")
+		.then((response) => {
+		 //console.log(response.status)
+		 //console.log(ans)
+
+		 expect(response.statusCode).toBe(404);
+		});
+	});
+
+	test('id out of range is detected well', () => {
+	  //const response = await sup(app).post('/events');
+
+		return sup(app)
+		.put("/events/20")
+		.then((response) => {
+		 console.log(response.body)
+		 //console.log(ans)
+		 //xpect(response.statusCode).toBe(200);
+		 expect(response.body).toStrictEqual({ error: 'Id not found' });
 		});
 	});
 
